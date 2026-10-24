@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>I Love You ❤️ | Forever & Always</title>
+  <meta name="description" content="A wholesome retro pixel love adventure made just for you.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+  
+  <!-- Google Fonts: Pixel Game Fonts & Soft Rounded Reading Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas for interactive floating pixel hearts & sparkles -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Audio controller toggle floating on top right -->
+  <div class="audio-control-wrapper">
+    <button id="sound-btn" class="pixel-btn-icon" aria-label="Toggle retro music" title="Toggle Lo-fi Pixel Music">
+      <span class="icon">🎵</span>
+      <span class="label">BGM: OFF</span>
+    </button>
+  </div>
+
+  <main class="page-container">
+    
+    <!-- TOP RETRO GAME HUD -->
+    <header class="game-hud">
+      <div class="hud-item player-info">
+        <span class="pixel-tag">PLAYER 1</span>
+        <span class="hud-val">YOU <span class="heart-pulse">💖</span></span>
+      </div>
+      <div class="hud-item level-info">
+        <span class="pixel-tag">STAGE</span>
+        <span class="hud-val">WORLD 1-FOREVER</span>
+      </div>
+      <div class="hud-item hp-info">
+        <span class="pixel-tag">LOVE HP</span>
+        <div class="hp-bar-container">
+          <div class="hp-bar-fill"></div>
+          <span class="hp-text">999999 / ∞</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="floating-badge">
+        <span class="star-icon">✨</span> SPECIAL QUEST UNLOCKED <span class="star-icon">✨</span>
+      </div>
+
+      <div class="pixel-heart-container">
+        <div class="retro-pixel-heart"></div>
+      </div>
+
+      <!-- MAIN PIXEL TITLE -->
+      <h1 class="pixel-love-title">
+        <span class="title-word pink-glow">I LOVE</span>
+        <span class="title-word blue-glow">YOU</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        In every universe, in every timeline, and through every high score... my favorite player will always be you.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#letter-section" class="pixel-btn pink-btn" id="start-btn">
+          <span>💌 OPEN LETTER</span>
+        </a>
+        <a href="#gallery-section" class="pixel-btn blue-btn">
+          <span>📸 OUR MEMORIES</span>
+        </a>
+      </div>
+
+      <div class="stats-card-grid">
+        <div class="stat-box">
+          <div class="stat-number">365+</div>
+          <div class="stat-label">Days Loving You</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Happiness Rate</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">∞</div >
+          <div class="stat-label">Forever To Go</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE LOVE LETTER SECTION -->
+    <section id="letter-section" class="section letter-section">
+      <div class="pixel-window">
+        <div class="pixel-window-header">
+          <span class="window-title">💌 SECRET_MESSAGE_FOR_YOU.txt</span>
+          <div class="window-buttons">
+            <span class="win-btn win-minimize"></span>
+            <span class="win-btn win-maximize"></span>
+            <span class="win-btn win-close"></span>
+          </div>
+        </div>
+        <div class="pixel-window-content">
+          <div class="pixel-stamp">❤️ TO MY FAVORITE PERSON</div>
+          <h2 class="letter-heading">Hey Beautiful,</h2>
+          <div class="letter-body">
+            <p>
+              I made this little cozy corner on the internet just for you. No matter how crazy the world gets, this is our little safe space full of smiles, memories, and all the love I have for you.
+            </p>
+            <p>
+              Every time I look at your smile, hear your voice, or look through all the sweet moments we've shared, I'm reminded of just how lucky I am to have you in my life. You bring color to my quiet days and calm to my loud ones.
+            </p>
+            <p>
+              Thank you for being the sweetest, funniest, most wonderful soul. I choose you today, tomorrow, and every single day that follows.
+            </p>
+            <p class="letter-sign">
+              Forever yours,<br>
+              <strong>With all my love & infinite hearts 💖</strong>
+            </p>
+          </div>
+          
+          <div class="letter-actions">
+            <button id="hug-btn" class="pixel-btn pink-btn">
+              <span>🤗 SEND VIRTUAL HUG</span>
+            </button>
+            <button id="sparkle-btn" class="pixel-btn blue-btn">
+              <span>✨ SHOWER HEARTS</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMORY VIDEO SHOWCASE (IF PRESENT) -->
+    <section id="video-section" class="section video-section">
+      <div class="section-header">
+        <h2 class="section-title pixel-font">
+          <span class="pink-text">SPECIAL</span> <span class="blue-text">MOMENT</span> 🎬
+        </h2>
+        <p class="section-desc">A little snippet of pure joy that always makes my heart melt.</p>
+      </div>
+
+      <div class="arcade-tv-frame">
+        <div class="tv-antenna">
+          <span class="antenna-left"></span>
+          <span class="antenna-right"></span>
+        </div>
+        <div class="tv-screen-bezel">
+          <div class="tv-glare"></div>
+          <video id="love-video" controls playsinline preload="metadata" poster="assets/photos/photo_01.jpg">
+            <source src="assets/photos/video_01.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="tv-controls">
+          <div class="tv-brand pixel-font">ROMANCE-VISION 64</div>
+          <div class="tv-knobs">
+            <span class="knob"></span>
+            <span class="knob"></span>
+            <span class="speaker-grill">
+              <span></span><span></span><span></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY SECTION -->
+    <section id="gallery-section" class="section gallery-section">
+      <div class="section-header">
+        <h2 class="section-title pixel-font">
+          <span class="pink-text">OUR</span> <span class="blue-text">GALLERY</span> 📸
+        </h2>
+        <p class="section-desc">Every photograph holds a heartbeat and a cherished memory with you.</p>
+      </div>
+
+      <!-- Filter / view helper -->
+      <div class="gallery-toolbar">
+        <span class="toolbar-label pixel-font">COLLECTION: 24/24 UNLOCKED</span>
+        <button id="shuffle-btn" class="pixel-btn-small" title="Shuffle Polaroids">🎲 SHUFFLE</button>
+      </div>
+
+      <!-- POLAROID GRID -->
+      <div class="polaroid-grid" id="polaroid-grid">
+        <!-- Dynamically injected or rendered for seamless performance -->
+      </div>
+    </section>
+
+    <!-- INTERACTIVE "REASONS WHY I LOVE YOU" MACHINE -->
+    <section class="section reasons-section">
+      <div class="arcade-card">
+        <div class="arcade-card-header pixel-font">
+          <span>💖 REASONS WHY I LOVE YOU 💖</span>
+        </div>
+        <div class="arcade-card-body">
+          <div class="reason-display-box" id="reason-box">
+            <p id="reason-text">"Press the button below to draw a sweet reminder of why you mean the world to me..."</p>
+          </div>
+          <button id="new-reason-btn" class="pixel-btn pink-btn big-btn">
+            <span>🎁 DRAW A SWEET NOTE</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="game-footer">
+      <div class="footer-pixel-border"></div>
+      <p class="pixel-font footer-title">GAME COMPLETED: 100%</p>
+      <p class="footer-note">Crafted with endless love & cuddles for my favorite girl in the whole universe.</p>
+      <p class="footer-hearts">❤️ 🩷 🩵 💙 💖 💜</p>
+      <div class="footer-sub">Press anywhere on the screen for love sparkles ✨</div>
+    </footer>
+
+  </main>
+
+  <!-- LIGHTBOX MODAL FOR HIGH-RES PHOTOS -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-overlay" id="lightbox-overlay"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close photo">✕</button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous photo">◀</button>
+      
+      <div class="lightbox-content">
+        <div class="lightbox-polaroid">
+          <div class="tape-strip top-tape"></div>
+          <img id="lightbox-img" src="" alt="Enlarged photo memory">
+          <div class="lightbox-caption" id="lightbox-caption">Our sweetest memory ❤️</div>
+        </div>
+      </div>
+      
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next photo">▶</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
